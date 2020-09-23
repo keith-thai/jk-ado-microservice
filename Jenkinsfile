@@ -9,25 +9,23 @@
 //		echo "Test"
 //	}
 //}
-
 //Scripted
 //node {
 //    echo "Build"
 //    echo "Test"
 //    echo "Integration Test"
 //}
-
 //Declarative
 pipeline {
     agent any
     stages {
-        steps ('Build') {
+        step ('Build') {
             echo "Build"
         }
-        steps ('Test') {
+        step ('Test') {
             echo "Test"
         }
-        steps ('Integration Test') {
+        step ('Integration Test') {
             echo "Integration Test"
         }
     }
